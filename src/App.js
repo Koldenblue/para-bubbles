@@ -2,6 +2,7 @@ import React from 'react';
 import ParallaxWrapper from './components/ParaBubble/ParallaxWrapper';
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import TextBox from './components/TextBox';
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
   return (
     <div className='container-fluid'>
       <ParallaxWrapper />
+      <TextBox />
     </div>
   );
 }

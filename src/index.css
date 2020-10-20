@@ -1,0 +1,9 @@
+.text-box {
+  background-color: rgba(50, 100, 150, 0.8);
+  position: fixed;
+  border-radius: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  /* transform: translateY(-50%); */
+}
