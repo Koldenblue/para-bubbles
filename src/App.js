@@ -1,5 +1,5 @@
 import React from 'react';
-import ParallaxWrapper from './pages/ParallaxWrapper';
+import ParallaxWrapper from './components/ParaBubble/ParallaxWrapper';
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

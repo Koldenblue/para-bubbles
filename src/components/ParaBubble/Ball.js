@@ -29,8 +29,6 @@ function Ball(props) {
     }
   }
 
-
-
   return (
     <>
         <ParallaxLayer offset={props.offset} speed={props.speed} style={{left:props.left}} >
