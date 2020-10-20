@@ -3,12 +3,12 @@ import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import {useSpring, animated} from 'react-spring'
 
 function Ball(props) {
-  const [toggle, setToggle] = useState(false);
+  // const [toggle, setToggle] = useState(false);
 
-  const toggleGrow = () => {
-    setToggle(!toggle);
-    console.log(toggle)
-  }
+  // const toggleGrow = () => {
+  //   setToggle(!toggle);
+  //   console.log(toggle)
+  // }
 
   // let grow = useSpring({
   //   x: toggle ? 100 : 0    
@@ -20,7 +20,8 @@ function Ball(props) {
   let styles = {
     ball: {
       backgroundColor: props.backgroundColor,
-      padding: props.padding,
+      // padding: `${props.padding + (toggle ? 50 : 0)}px`,
+      padding: `${props.padding}px`,
       height: '50px',
       width: `${50}px`,
       borderRadius: '1000px',
@@ -32,8 +33,8 @@ function Ball(props) {
 
   return (
     <>
-        <ParallaxLayer offset={props.offset} speed={props.speed} style={{left:props.left}}>
-          <div style={styles.ball} onClick={toggleGrow}></div>
+        <ParallaxLayer offset={props.offset} speed={props.speed} style={{left:props.left}} >
+          <div style={styles.ball} ></div>
         </ParallaxLayer>
     </>
   )

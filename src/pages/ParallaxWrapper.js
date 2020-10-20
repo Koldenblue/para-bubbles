@@ -33,7 +33,7 @@ function ParallaxWrapper() {
     const randGreen = Math.floor(Math.random() * 256);
     const randBlue = Math.floor(Math.random() * 256);
     const randTransparency = (Math.floor(Math.random() * 100) + 1) / 100
-    const randSpeed = (Math.floor(Math.random() * 500)) / 500
+    const randSpeed = (Math.random() * 5) - 2.5
     let randLeft = Math.random()
     const randSize = Math.floor(Math.random() * 50) + 25
 
@@ -44,7 +44,7 @@ function ParallaxWrapper() {
         speed={randSpeed}
         backgroundColor={`rgba(${randRed}, ${randGreen}, ${randBlue}, ${randTransparency})`}
         left={`${randLeft * maxLeft - 50}px`}
-        padding={`${randSize}px`}
+        padding={randSize}
       />
     )
 
