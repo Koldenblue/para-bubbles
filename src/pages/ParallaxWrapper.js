@@ -22,6 +22,8 @@ function ParallaxWrapper() {
 
   }, [])
 
+  let key=0;
+
   return (
     <>
       <Parallax pages={pages} scrolling={true}>
@@ -37,6 +39,7 @@ function ParallaxWrapper() {
 
     return (
       <Ball
+        key = {key++}
         offset={randOffset}
         speed={randSpeed}
         backgroundColor={`rgba(${randRed}, ${randGreen}, ${randBlue}, ${randTransparency})`}
