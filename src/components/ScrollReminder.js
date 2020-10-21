@@ -7,12 +7,16 @@ function ScrollReminder() {
 
   useEffect(() => {
     const handleScroll = () => {
+      // fade container upon scrolling
       document.getElementsByClassName('parallax-container')[0].removeEventListener('scroll', handleScroll, {passive: true})
       setHasScrolled(true)
+
+    // moves scroll banner out of the way of form after fading
       setTimeout(() => {
         setHideDisp(true)
       }, 6000)
     }
+
     document.getElementsByClassName('parallax-container')[0].addEventListener('scroll', handleScroll, {passive: true})
   },[])
 

@@ -9,6 +9,7 @@ export default function GifBox() {
   const [gifUrl, setGifUrl] = useState('')
   const gifSearchLimit = 10;
 
+  // searches giphy upon submit
   function handleSubmit(event) {
     event.preventDefault();
     if (event.target[0].value !== '') {
@@ -28,6 +29,7 @@ export default function GifBox() {
   }
 
 
+  // handle no image found, and make sure input box is not empty
   let gifImg;
   if (gifUrl === 'NONE') {
     gifImg = <h1>No image found, try again!</h1>

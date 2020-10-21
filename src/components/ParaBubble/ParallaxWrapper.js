@@ -3,15 +3,14 @@ import Ball from './Ball';
 
 function ParallaxWrapper(props) {
   const [width, setWidth] = useState(window.innerWidth)
-  const numBalls = 200;
 
 
-  let ballArr = new Array(numBalls)
+  let ballArr = new Array(props.numBubbles)
   for (let i = 0, j = ballArr.length; i < j; i++) {
     ballArr[i] = i;
   }
 
-
+  // window width used to distrubite Ball components
   useEffect(() => {
     function handleResize() {
       setWidth(window.innerWidth)
