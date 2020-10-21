@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ParallaxWrapper from './components/ParaBubble/ParallaxWrapper';
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,6 +8,7 @@ import ScrollReminder from './components/ScrollReminder';
 
 function App() {
   const pages = 2.1;
+
 
   return (
     <>
