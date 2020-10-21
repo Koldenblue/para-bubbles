@@ -2,9 +2,10 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { ParallaxLayer } from 'react-spring/renderprops-addons';
 
 
-export default function TextBox() {
+export default function GifBox() {
   const [gifUrl, setGifUrl] = useState('')
 
 
@@ -30,6 +31,8 @@ export default function TextBox() {
   }
 
   return (
+  <ParallaxLayer offset={0} speed={1}>
+
     <div className='container text-box'>
       {gifImg}
       <Form onSubmit={handleSubmit}>
@@ -40,5 +43,6 @@ export default function TextBox() {
         <Button type='submit'>Get Gif</Button>
       </Form>
     </div>
+    </ParallaxLayer>
   )
 }
