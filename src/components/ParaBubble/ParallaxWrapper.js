@@ -26,7 +26,7 @@ function ParallaxWrapper() {
   let key=0;
   return (
     <>
-      <Parallax pages={pages} scrolling={true}>
+      <Parallax pages={pages} scrolling={true} className='para-container'>
         {ballArr.map(() => {
     const randOffset = (Math.floor(Math.random() * (pages * 1000))) / 1000;
     const randRed = Math.floor(Math.random() * 256);

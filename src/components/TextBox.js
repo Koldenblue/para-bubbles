@@ -1,20 +1,44 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
 
 export default function TextBox() {
+  const [gifUrl, setGifUrl] = useState('')
 
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(event.target[0].value)
+    console.log("clicked")
+    if (event.target[0].value !== '') {
+      let searchGif = event.target[0].value
+      axios.get("https://api.giphy.com/v1/gifs/search?api_key=KMJCyLbjOMWXTaQOvNjFdBssv831R8Md&q=" + searchGif + "&limit=25&offset=0&rating=g&lang=en").then(data => {
+      let randGif = Math.floor(Math.random() * 25)
+      setGifUrl(data.data.data[randGif].images.original.url)
+      })
+    } else {
+      console.log('empty')
+    }
+  }
+
+  let gifImg;
+  if (gifUrl !== '') {
+    console.log(gifUrl)
+    gifImg = <img src={gifUrl} className='gif-img'/>
+  }
 
   return (
     <div className='container text-box'>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tempore quidem porro voluptas fugit quia voluptate ea totam, voluptatem, nesciunt soluta officia, iste rerum recusandae commodi provident culpa. Minima, veritatis.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tempore quidem porro voluptas fugit quia voluptate ea totam, voluptatem, nesciunt soluta officia, iste rerum recusandae commodi provident culpa. Minima, veritatis.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tempore quidem porro voluptas fugit quia voluptate ea totam, voluptatem, nesciunt soluta officia, iste rerum recusandae commodi provident culpa. Minima, veritatis.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tempore quidem porro voluptas fugit quia voluptate ea totam, voluptatem, nesciunt soluta officia, iste rerum recusandae commodi provident culpa. Minima, veritatis.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tempore quidem porro voluptas fugit quia voluptate ea totam, voluptatem, nesciunt soluta officia, iste rerum recusandae commodi provident culpa. Minima, veritatis.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tempore quidem porro voluptas fugit quia voluptate ea totam, voluptatem, nesciunt soluta officia, iste rerum recusandae commodi provident culpa. Minima, veritatis.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tempore quidem porro voluptas fugit quia voluptate ea totam, voluptatem, nesciunt soluta officia, iste rerum recusandae commodi provident culpa. Minima, veritatis.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tempore quidem porro voluptas fugit quia voluptate ea totam, voluptatem, nesciunt soluta officia, iste rerum recusandae commodi provident culpa. Minima, veritatis.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tempore quidem porro voluptas fugit quia voluptate ea totam, voluptatem, nesciunt soluta officia, iste rerum recusandae commodi provident culpa. Minima, veritatis.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tempore quidem porro voluptas fugit quia voluptate ea totam, voluptatem, nesciunt soluta officia, iste rerum recusandae commodi provident culpa. Minima, veritatis.
+      {gifImg}
+      <Form onSubmit={handleSubmit}>
+        <Form.Group controlId="gif-search">
+          <Form.Label>GIF search</Form.Label>
+          <Form.Control type="text" placeholder="" />
+        </Form.Group>
+        <Button type='submit'>Get Gif</Button>
+      </Form>
     </div>
   )
 }

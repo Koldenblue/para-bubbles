@@ -8,10 +8,12 @@ function App() {
 
 
   return (
-    <div className='container-fluid'>
-      <ParallaxWrapper />
-      <TextBox />
-    </div>
+    <>
+      <div className='container-fluid'>
+        <ParallaxWrapper />
+        <TextBox />
+      </div>
+    </>
   );
 }
 
