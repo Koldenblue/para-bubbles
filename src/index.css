@@ -39,10 +39,17 @@
   left: 0;
 }
 
-.gif-btn, .options-btn {
-  margin-bottom: 10px;
+.gif-btn {
+  background: rgb(249,255,0);
+  background: linear-gradient(120deg, rgb(207, 211, 0) 0%, rgba(255,0,0,1) 100%);
+}
+
+.options-btn {
   background: rgb(249,255,0);
   background: linear-gradient(243deg, rgb(207, 211, 0) 0%, rgba(255,0,0,1) 100%);
+}
+.gif-btn, .options-btn {
+  margin-bottom: 10px;
   border-color: orange !important;
 }
 
