@@ -10,8 +10,8 @@ function OptionsBox() {
   }
 
   return (<>
-  <ParallaxLayer offset={1.} speed={1}>
-    <div className='options-box container'>
+  <ParallaxLayer offset={1} speed={1}>
+    <div className='options-box container box-bg'>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="options-box">
           <Form.Label>number of bubbles</Form.Label>

@@ -44,7 +44,7 @@ export default function GifBox() {
   return (
   <ParallaxLayer offset={0} speed={1}>
 
-    <div className='container text-box'>
+    <div className='container gif-box box-bg'>
       {gifImg}
       <Form  onSubmit={handleSubmit}>
         <Form.Group controlId="gif-search">

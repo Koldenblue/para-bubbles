@@ -14,7 +14,7 @@ function ScrollReminder() {
   })
 
   return (<>
-    <animated.div className='scroll-banner' style={fadeIn}>Scroll Down!</animated.div>
+    <animated.h1 className='scroll-banner' style={fadeIn}>Scroll Down!</animated.h1>
   </>)
 }
 

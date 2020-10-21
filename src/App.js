@@ -7,12 +7,12 @@ import OptionsBox from './components/OptionsBox';
 import ScrollReminder from './components/ScrollReminder';
 
 function App() {
-  const pages = 2;
+  const pages = 2.1;
 
   return (
     <>
       <div className='container-fluid'>
-      <Parallax pages={pages} scrolling={true} className='para-container'>
+      <Parallax pages={pages} scrolling={true} className='parallax-container'>
 
         <ScrollReminder />
         <ParallaxWrapper pages={pages}/>
