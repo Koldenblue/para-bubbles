@@ -26,8 +26,15 @@ function ParallaxWrapper(props) {
       {ballArr.map(() => {
         const randOffset = (Math.floor(Math.random() * (props.pages * 1000))) / 1000;
         const randRed = Math.floor(Math.random() * 256);
-        const randGreen = Math.floor(Math.random() * 256);
-        const randBlue = Math.floor(Math.random() * 256);
+        let randGreen;
+        let randBlue;
+        if (props.grayscale) {
+          randGreen = randRed;
+          randBlue = randRed;
+        } else {
+          randGreen = Math.floor(Math.random() * 256);
+          randBlue = Math.floor(Math.random() * 256);
+        }
         const randTransparency = (Math.floor(Math.random() * 100) + 1) / 100
         const randSpeed = (Math.random() * 5) - 2.5
         let randLeft = Math.random()

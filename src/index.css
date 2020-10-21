@@ -41,8 +41,14 @@
 
 .gif-btn, .options-btn {
   margin-bottom: 10px;
+  background: rgb(249,255,0);
+  background: linear-gradient(243deg, rgb(207, 211, 0) 0%, rgba(255,0,0,1) 100%);
+  border-color: orange !important;
 }
 
+.gif-btn:focus, .options-btn:focus, .gif-btn:hover, .options-btn:hover  {
+  box-shadow: 0 0 0 .1rem orange !important;
+}
 
 #gif-form {
   margin-top: 20px;
@@ -61,8 +67,3 @@
   transform: translateX(-50%);
   top: 30%;
 }
-
-/* .grayscale-radio {
-  background-color: brown;
-  display: inline-flex !important;
-} */

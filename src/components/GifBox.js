@@ -49,7 +49,7 @@ export default function GifBox() {
     <div className='container gif-box box-bg'>
       {gifImg}
       <Form  onSubmit={handleSubmit}>
-        <Form.Group controlId="gif-search">
+        <Form.Group>
           <Form.Control id='gif-form' type="text" placeholder="Enter a search term" />
         </Form.Group>
         <Button type='submit' className='gif-btn' >Gif Search</Button>

@@ -10,7 +10,7 @@ function OptionsBox(props) {
     <div className='options-box container box-bg'>
       <Form onSubmit={props.handleOptionsSubmit}>
         <Form.Group controlId="options-box">
-          <Form.Label>Number of Bubbles - enter a number between 0 and 300. Higher bubble counts may slow down on older computers!</Form.Label>
+          <Form.Label>Number of Bubbles - enter a number from 0 to 300. Higher bubble counts may slow down on older computers!</Form.Label>
           <Form.Control type="text" placeholder="200" />
         </Form.Group>
         <Form.Group controlId='grayscale'>
@@ -18,6 +18,7 @@ function OptionsBox(props) {
         </Form.Group>
         <Button type='submit' className='options-btn'>Generate Background with Selected Options</Button>
       </Form>
+      {props.numberWarning}
     </div>
     </ParallaxLayer>
   </>)
