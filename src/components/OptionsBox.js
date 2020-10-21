@@ -20,7 +20,7 @@ function OptionsBox() {
         <Form.Group controlId='grayscale'>
           <Form.Check>Grayscale</Form.Check>
         </Form.Group>
-        <Button type='submit'>Get Gif</Button>
+        <Button type='submit' className='options-btn'>Generate Background with Selected Options</Button>
       </Form>
     </div>
     </ParallaxLayer>

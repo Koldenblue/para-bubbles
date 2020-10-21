@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ParallaxWrapper from './components/ParaBubble/ParallaxWrapper';
-import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
+import { Parallax } from 'react-spring/renderprops-addons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import GifBox from './components/GifBox';
 import OptionsBox from './components/OptionsBox';
