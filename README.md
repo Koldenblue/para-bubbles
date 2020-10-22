@@ -12,6 +12,8 @@
 6. <a href="#questions">Issues and Questions</a>
 <hr><h3 id='description'>Description</h3>
 
+![image](https://user-images.githubusercontent.com/64618290/96818112-af016c80-13d5-11eb-9f44-96348a6a7d5e.png)
+
 View the deployed page at https://para-bubbles.herokuapp.com!
 
 This project is a simple yet colorful webpage created using React. Animations are accomplished using the npm package react-spring. Bubbles and input boxes scroll at different speeds, with a parallax effect. The number of bubbles is customizable as well, and grayscle colors only can be optionally implemented. Each bubble is a separate React compnonent, containing a random color value. And as a bonus, the Giphy API has been connected to the app, and GIFs can be searched for. 
